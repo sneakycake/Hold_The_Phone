@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:text="@string/welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome"
+        android:layout_below="@+id/welcome"
+        android:text="@string/blank"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/changeUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/blank"
+        android:onClick="changeUser"
+         />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="153dp"
+        android:onClick="panic"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/createRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user"
+        android:layout_alignTop="@+id/imageButton1"
+        android:layout_marginTop="44dp"
+        android:onClick="createRoom"
+        android:text="@string/create_room" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="38dp"
+        android:text="@string/join_room" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createRoomButton"
+        android:layout_alignLeft="@+id/button1"
+        android:text="Button" />
+
+</RelativeLayout>
