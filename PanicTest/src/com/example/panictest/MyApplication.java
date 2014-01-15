@@ -5,6 +5,7 @@ import com.parse.ParseInstallation;
 import com.parse.PushService;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.util.Log;
 
@@ -12,6 +13,8 @@ public class MyApplication extends Application
 {
 	
 	
+	private static Context context;
+
 	//This "Application" page is for push notifications so far. However, I've read that you can do a bit more with it.
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -27,6 +30,7 @@ public class MyApplication extends Application
 		PushService.setDefaultPushCallback(this, HomePage.class);
 		ParseInstallation.getCurrentInstallation().saveInBackground();
 		Log.w("myApp", "hit MyApp");
+		MyApplication.context = getApplicationContext();
 	}
 	@Override
 	public void onLowMemory() {
@@ -38,7 +42,9 @@ public class MyApplication extends Application
 		super.onTerminate();
 	}
  
-
+	public static Context getAppContext() {
+        return MyApplication.context;
+    }
 
 
 }

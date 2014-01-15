@@ -10,11 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="49dp"
         android:ems="10"
         android:hint="@string/room_name" >
 
         <requestFocus />
+        <requestFocus />
+
     </EditText>
 
     <EditText
@@ -23,18 +25,60 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/createRoomName"
         android:layout_below="@+id/createRoomName"
-        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/CreateRoomThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createRoomPassword"
+        android:layout_below="@+id/createRoomPassword"
+        android:layout_marginTop="58dp"
+        android:ems="10"
+        android:hint="@string/Percent"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CreateRoomThreshold"
+        android:layout_below="@+id/createRoomPassword"
+        android:layout_marginTop="32dp"
+        android:text="@string/Threshold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/createRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/createRoomPassword"
-        android:layout_centerVertical="true"
-        android:text="@string/create" 
-        android:onClick="confirmCreateRoom"/>
+        android:layout_alignRight="@+id/CreateRoomThreshold"
+        android:layout_below="@+id/CreateRoomThreshold"
+        android:layout_marginTop="62dp"
+        android:onClick="confirmCreateRoom"
+        android:text="@string/create" />
+
+    <EditText
+        android:id="@+id/CreateRoomNumberStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CreateRoomThreshold"
+        android:layout_below="@+id/CreateRoomThreshold"
+        android:ems="10"
+        android:hint="@string/NumberStudents"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createRoomName"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/RoomInfo"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

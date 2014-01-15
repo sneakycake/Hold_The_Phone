@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class RoomCreateSuccess extends Activity {
 	
@@ -17,7 +18,17 @@ public class RoomCreateSuccess extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_room_create_success);
 		
+		
+		
+		final TextView roomName = (TextView) findViewById(R.id.RoomCreateSuccessName);
+		roomName.setText("Room Name:  " + CreateRoom.roomName());
+		
+		final TextView threshold = (TextView) findViewById(R.id.RoomCreateSuccessThreshold);
+		threshold.setText("Threshold:  "+CreateRoom.threshold().toString());
 		//Displays success image for 1.5 seconds and then returns to the homepage
+		
+		
+		
 		
 		new Handler().postDelayed(new Runnable() {
             @Override
@@ -26,7 +37,7 @@ public class RoomCreateSuccess extends Activity {
                 RoomCreateSuccess.this.startActivity(mainIntent);
                 RoomCreateSuccess.this.finish();
             }
-        }, 1500);
+        }, 6000);
 	}
 
 	@Override

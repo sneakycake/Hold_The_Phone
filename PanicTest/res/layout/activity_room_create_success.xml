@@ -5,11 +5,32 @@
     tools:context=".RoomCreateSuccess" >
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="77dp"
         android:text="@string/room_create_success" />
+
+    <TextView
+        android:id="@+id/RoomCreateSuccessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="24dp"
+        android:text="@string/blank"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/RoomCreateSuccessThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RoomCreateSuccessName"
+        android:layout_below="@+id/RoomCreateSuccessName"
+        android:layout_marginTop="24dp"
+        android:text="@string/blank"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

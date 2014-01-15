@@ -2,36 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestPage" >
+    tools:context=".PanicPage" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/WelcomeToRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:text="Request Sent"
+        android:layout_marginLeft="15dp"
+        android:text="@string/WelcomeTo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <TextView
-        android:id="@+id/textCountdown"
+    <ImageButton
+        android:id="@+id/imageButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_centerVertical="true"
+        android:onClick="panic"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/TestPageNumberPanic"
+        android:id="@+id/RoomNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textCountdown"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_marginBottom="36dp"
-        android:text="Large Text"
+        android:layout_alignLeft="@+id/WelcomeToRoom"
+        android:layout_below="@+id/WelcomeToRoom"
+        android:text="@string/blank"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

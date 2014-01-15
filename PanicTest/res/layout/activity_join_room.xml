@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JoinRoom" >
+
+    <EditText
+        android:id="@+id/RoomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="@string/roomName" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/RoomNamePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RoomName"
+        android:layout_below="@+id/RoomName"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/joinRoomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/RoomNamePassword"
+        android:layout_below="@+id/RoomNamePassword"
+        android:onClick="joinRoom"
+        android:text="@string/joinRoom" />
+
+</RelativeLayout>

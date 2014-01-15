@@ -19,5 +19,18 @@
     <string name="username">Username</string>
     <string name="login">Login</string>
     <string name="join_room">Join Room</string>
+    <string name="title_activity_join_room">JoinRoom</string>
+    <string name="joinRoom">Join Room</string>
+    <string name="roomName">Room Name</string>
+    <string name="JoinARoom">Join A Room</string>
+    <string name="title_activity_panic_page">PanicPage</string>
+    <string name="WelcomeTo">Welcome To Room</string>
+    <string name="title_activity_join_room_failed">JoinRoomFailed</string>
+    <string name="FailedToJoinRoom">Failed to Join Room:</string>
+    <string name="FailedToJoinRoom2">Failed to join room. Room name does not exist.</string>
+    <string name="Percent">--/100 (Percent)</string>
+    <string name="Threshold">Threshold</string>
+    <string name="RoomInfo">Room Info</string>
+    <string name="NumberStudents"># Students</string>
 
 </resources>
