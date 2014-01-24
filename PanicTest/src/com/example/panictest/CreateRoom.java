@@ -76,4 +76,8 @@ public class CreateRoom extends Activity {
 	{
 		return threshold;
 	}
+	public static Double numStudents()
+	{
+		return numberStudents;
+	}
 }	

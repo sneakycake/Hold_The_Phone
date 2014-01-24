@@ -77,6 +77,10 @@
             android:name="com.example.panictest.JoinRoomFailed"
             android:label="@string/title_activity_join_room_failed" >
         </activity>
+        <activity
+            android:name="com.example.panictest.ThresholdHit"
+            android:label="@string/title_activity_threshold_hit" >
+        </activity>
     </application>
 
 </manifest>

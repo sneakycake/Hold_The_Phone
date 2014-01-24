@@ -8,7 +8,6 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-      
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="15dp"
         android:text="@string/welcome"
@@ -20,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/welcome"
         android:layout_below="@+id/welcome"
-        android:text="@string/blank"
+        android:text="@string/toHoldThePhone"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button

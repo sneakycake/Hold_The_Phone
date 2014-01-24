@@ -55,11 +55,11 @@ public class HomePage extends Activity {
 		else
 		{
 			login.setText("Change User");
+			final TextView user = (TextView) findViewById(R.id.user);
+			user.setText(username);
 			
 		}
-		//Setting Username Text
-		final TextView user = (TextView) findViewById(R.id.user);
-		user.setText(username);
+		
 		Log.w("myApp", "set user");
 		
 		

@@ -103,25 +103,5 @@ public class PanicPage extends Activity {
 		
 		
 	}
-	public static double counter()
-	{
-		return counter;
-	}
-	public double threshold()
-	{
-		return threshold;
-	}
-	public static double numStudents()
-	{
-		return numStudents;
-	}
-	public static boolean overThreshold()
-	{
-		Double percent = (counter()+1)/numStudents();
-		if (percent>=threshold)
-		{
-			return true;			
-		}
-		return false;
-	}
+
 }

@@ -32,5 +32,12 @@
     <string name="Threshold">Threshold</string>
     <string name="RoomInfo">Room Info</string>
     <string name="NumberStudents"># Students</string>
+    <string name="title_activity_threshold_hit">ThresholdHit</string>
+    <string name="ThresholdHit">Threshold Hit</string>
+    <string name="Panic">PANIC</string>
+    <string name="PANIC">PANIC!</string>
+    <string name="WelcomeToHoldThePhone">Welcome to Hold the Phone</string>
+    <string name="toHoldThePhone">to Hold the Phone</string>
+    <string name="joinRoomInfo">Room name must be exact</string>
 
 </resources>

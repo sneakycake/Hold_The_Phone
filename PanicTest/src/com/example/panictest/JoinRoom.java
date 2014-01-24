@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseInstallation;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
@@ -41,6 +42,13 @@ public class JoinRoom extends Activity {
     	EditText y = (EditText) findViewById(R.id.RoomNamePassword);
     	String roomPass = y.getText().toString();
 		
+    	ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+		//installation.increment("Counter");
+		installation.put("Room",roomName);
+		installation.saveInBackground();
+    	
+    	
+    	
     	final Intent intent = new Intent(this, PanicPage.class);
     	final Intent intent1 = new Intent(this, JoinRoomFailed.class);
     	Log.w("myApp", "JOIN ROOM1");

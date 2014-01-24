@@ -1,18 +1,22 @@
 package com.example.panictest;
 
-import com.parse.GetCallback;
-import com.parse.Parse;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import android.R.integer;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
+
+import com.parse.GetCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParseObject;
+import com.parse.ParsePush;
+import com.parse.ParseQuery;
 
 public class TestPage extends Activity {
 	double counter;
@@ -26,8 +30,7 @@ public class TestPage extends Activity {
 		Parse.initialize(this, "63Yf8EYNRDGDn9UH2wsOpIHqV2XbP65bXx0jtI5l", "YLj93NTJHyoDEO36k5s6rJyt3aiWSQNeOeDm7Uxr"); 
 	
 		
-		//For now, I am just using the ParseObject ID of the room "working?" This finds the ParseObject in the ParseClass "Room" and then increments the counter. 
-		//Bassically, the counter for room "working" goes up by 1
+
 		
 		
 		//Newest Version
@@ -52,6 +55,29 @@ public class TestPage extends Activity {
 		});
 		
 		
+		if (DataGrabber.overThreshold()==true)
+		{
+			JSONObject object = new JSONObject();
+			  try {
+			    object.put("action", "com.example.UPDATE_STATUS");
+			    
+			  } catch (JSONException e) {
+			    e.printStackTrace();
+			  }
+			
+			  
+			// Send push notification to query
+			ParseQuery<ParseInstallation> pushQuery = ParseInstallation.getQuery();
+			pushQuery.whereEqualTo("Room", JoinRoom.roomName());
+			pushQuery.whereEqualTo("class", true);
+			
+			ParsePush push = new ParsePush();
+			push.setQuery(pushQuery); // Set our Installation query
+			push.setMessage("it works!");
+			push.setData(object);
+			push.sendInBackground();
+		}
+		
 		
 		/*
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Room");
@@ -72,23 +98,6 @@ public class TestPage extends Activity {
 		*/
 		
 		
-		//Old Version with only Object ID
-		
-		/*
-		 ParseQuery<ParseObject> query = ParseQuery.getQuery("Room");
-	 		//query.whereEqualTo("Room","working");
-	 		// Retrieve the object by id
-	 		query.getInBackground("tLgPT1KSxx", new GetCallback<ParseObject>() {
-	 		  public void done(ParseObject room, ParseException e) {
-	 		    if (e == null) {
-	 		    	room.increment("Counter");
-	 				room.saveInBackground();
-	 		    }
-	 		  
-	 		}
-	 		});
-		
-		*/
 		
 		
 		
@@ -125,23 +134,7 @@ public class TestPage extends Activity {
 		         
 		         
 		         
-		     //Old decrement    
-		         
-		 		
-		 		/*
-		        ParseQuery<ParseObject> query = ParseQuery.getQuery("Room");
-		 		//query.whereEqualTo("Room","working");
-		 		// Retrieve the object by id
-		 		query.getInBackground("tLgPT1KSxx", new GetCallback<ParseObject>() {
-		 		  public void done(ParseObject room, ParseException e) {
-		 		    if (e == null) {
-		 		    	room.increment("Counter", -1);
-		 				room.saveInBackground();
-		 		    }
-		 		  
-		 		}
-		 		});
-		         */
+
 		     }
 		  }.start();
 	}

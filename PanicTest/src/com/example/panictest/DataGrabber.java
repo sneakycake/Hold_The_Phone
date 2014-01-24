@@ -22,12 +22,12 @@ public class DataGrabber extends IntentService{
 	
 	public DataGrabber() {
 		super("DataGrabber");
-		Log.w("myApp", "started1");
+	
 	}
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
-		Log.w("myApp", "started");
+		Log.w("myApp", "started Service");
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Room");
 		query.whereEqualTo("Room", JoinRoom.roomName());
 		query.getFirstInBackground(new GetCallback<ParseObject>(){ 

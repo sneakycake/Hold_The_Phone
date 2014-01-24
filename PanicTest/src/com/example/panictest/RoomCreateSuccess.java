@@ -25,6 +25,10 @@ public class RoomCreateSuccess extends Activity {
 		
 		final TextView threshold = (TextView) findViewById(R.id.RoomCreateSuccessThreshold);
 		threshold.setText("Threshold:  "+CreateRoom.threshold().toString());
+		
+		final TextView numStudents = (TextView) findViewById(R.id.RoomCreateSuccessStudents);
+		numStudents.setText("Number Students:  "+CreateRoom.numStudents().toString());
+		
 		//Displays success image for 1.5 seconds and then returns to the homepage
 		
 		

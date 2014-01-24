@@ -23,7 +23,7 @@ public class MyCustomReceiver extends BroadcastReceiver {
 	  mContext = context;  
      
       Intent intent1 = new Intent();  
-      intent1.setClass(mContext,CreateRoom.class);  
+      intent1.setClass(mContext,ThresholdHit.class);  
       pendingIntent =  PendingIntent.getActivity(mContext, 0, intent1, 0); 
       try {
 		pendingIntent.send(mContext, 0, intent1);
